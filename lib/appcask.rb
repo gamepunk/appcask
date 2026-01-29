@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'appcask/version'
+require_relative "appcask/version"
 require 'net/https'
 require 'open-uri'
 require 'json'

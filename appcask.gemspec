@@ -4,7 +4,7 @@ require_relative "lib/appcask/version"
 
 Gem::Specification.new do |spec|
   spec.name = "appcask"
-  spec.version = Appcask::VERSION
+  spec.version = AppCask::VERSION
   spec.authors = ["Billow Wang"]
   spec.email = ["netheadonline@gmail.com"]
 

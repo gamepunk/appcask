@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bd4c817-c426-471c-bdf5-e80649db2ae2" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/appcask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appcask.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appcask.gemspec" beforeDir="false" afterPath="$PROJECT_DIR$/appcask.gemspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/appcask.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/appcask.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/appcask/version.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/appcask/version.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +63,7 @@
       <updated>1767270112011</updated>
       <workItem from="1767270116395" duration="20000" />
       <workItem from="1769697520161" duration="4958000" />
-      <workItem from="1769702829159" duration="422000" />
+      <workItem from="1769702829159" duration="1223000" />
     </task>
     <servers />
   </component>
