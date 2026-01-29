@@ -105,7 +105,7 @@ module AppCask
 
       puts "\n🌍 Select App Store region:"
       COUNTRIES.each_slice(3) do |slice|
-        puts "  " + slice.map { |code, name| "#{code.ljust(4)}- #{name}" }.join("    ")
+        puts "  " + slice.map { |code, name| "#{code.ljust(3)}- #{name}" }.join("\n  ")
       end
       print "Choose one (default: us): "
 
@@ -126,6 +126,7 @@ module AppCask
       http.use_ssl = true
       http.open_timeout = 10
       http.read_timeout = 10
+      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
 
       request = Net::HTTP::Post.new(url)
       request.set_form_data(params)
