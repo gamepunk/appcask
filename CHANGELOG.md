@@ -27,3 +27,10 @@ All notable changes to this project will be documented in this file.
 - 🇬🇧 英国 (gb)
 - 🇩🇪 德国 (de)
 - 🇫🇷 法国 (fr)
+
+## [0.2.0] - 2026-01-30
+
+- Fix: include bin/appcask in gem package
+- Add: improved CLI UX and error messages
+- Add: full app info export (txt/json/markdown)
+- Improve: screenshot & icon download stability

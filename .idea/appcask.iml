@@ -24,7 +24,6 @@
     <orderEntry type="library" scope="PROVIDED" name="lint_roller (v1.1.0, mise: 4.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.27.0, mise: 4.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest-reporters (v1.7.1, mise: 4.0.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="net-http (v0.9.1, mise: 4.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parallel (v1.27.0, mise: 4.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parser (v3.3.10.1, mise: 4.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pp (v0.6.3, mise: 4.0.0) [gem]" level="application" />
@@ -44,6 +43,5 @@
     <orderEntry type="library" scope="PROVIDED" name="tsort (v0.2.0, mise: 4.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicode-display_width (v3.2.0, mise: 4.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicode-emoji (v4.2.0, mise: 4.0.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="uri (v1.1.1, mise: 4.0.0) [gem]" level="application" />
   </component>
 </module>
