@@ -3,7 +3,7 @@
 <div align="center">
 
 ![Version](https://img.shields.io/badge/version-0.3.0-blue.svg)
-![Ruby](https://img.shields.io/badge/ruby-%3E%3D%202.5.0-red.svg)
+![Ruby](https://img.shields.io/badge/ruby-%3E%3D%203.2.0-red.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 一个全能的命令行工具,用于下载 iOS App Store 的应用资源  
