@@ -1,140 +1,140 @@
-# AppCask 快速入门指南
+# AppCask Quick Start Guide
 
-## 欢迎使用 AppCask! 🎉
+## 🎉 Welcome to AppCask!
 
-AppCask 是一个强大的命令行工具，可以帮你下载 App Store 应用的各种资源。
+AppCask is a powerful command-line tool that helps you download various resources from App Store applications.
 
-## 5分钟快速上手
+## Get Started in 5 Minutes
 
-### 1️⃣ 安装
+### 1️⃣ Installation
 
 ```bash
 gem install appcask
 ```
 
-### 2️⃣ 第一次使用
+### 2️⃣ First Time Use
 
-最简单的方式 - 直接运行:
+The simplest way - just run:
 
 ```bash
 appcask
 ```
 
-然后按照提示操作即可！
+Then follow the prompts!
 
-### 3️⃣ 快速搜索
+### 3️⃣ Quick Search
 
-如果你知道要找什么应用:
+If you know what app you're looking for:
 
 ```bash
 appcask "Instagram"
 ```
 
-### 4️⃣ 选择下载内容
+### 4️⃣ Select Download Content
 
-运行后，你会看到 4 个选项:
+After running, you'll see 4 options:
 
 ```
-[1] 图标          - 下载应用图标（4种尺寸）
-[2] 截图          - 下载应用截图（iPhone和iPad）
-[3] 简介信息      - 导出应用详细信息
-[4] 完整包        - 一次下载所有内容
+[1] Icons       - Download app icons (4 sizes)
+[2] Screenshots - Download app screenshots (iPhone and iPad)
+[3] App Info    - Export detailed app information
+[4] Full Package - Download everything at once
 ```
 
-推荐新手选择 **[4] 完整包**，一次获取所有资源！
+We recommend beginners choose **[4] Full Package** to get all resources in one go!
 
-## 常用场景
+## Common Use Cases
 
-### 场景1: 我想要应用的高清图标
+### Scenario 1: I want high-resolution app icons
 
 ```bash
-appcask "应用名称"
-# 选择 [1] 图标
-# 选择 [3] 1024x1024
+appcask "App Name"
+# Select [1] Icons
+# Select [3] 1024x1024
 ```
 
-### 场景2: 我需要应用的所有截图
+### Scenario 2: I need all screenshots of the app
 
 ```bash
-appcask "应用名称"
-# 选择 [2] 截图
-# 选择 all (下载所有设备的截图)
+appcask "App Name"
+# Select [2] Screenshots
+# Select all (download screenshots for all devices)
 ```
 
-### 场景3: 我要做应用分析，需要详细信息
+### Scenario 3: I need detailed info for app analysis
 
 ```bash
-appcask "应用名称"
-# 选择 [3] 简介信息
-# 会生成 3 个文件: TXT, JSON, Markdown
+appcask "App Name"
+# Select [3] App Info
+# Generates 3 files: TXT, JSON, Markdown
 ```
 
-### 场景4: 我什么都要！
+### Scenario 4: I want everything!
 
 ```bash
-appcask "应用名称"
-# 选择 [4] 完整包
-# 一次性下载图标、截图、信息
+appcask "App Name"
+# Select [4] Full Package
+# Download icons, screenshots, and info in one go
 ```
 
-## 下载的文件在哪里？
+## Where Are Downloaded Files Saved?
 
-默认保存位置:
+Default save location:
 
 ```
-~/Desktop/AppCask Downloads/应用名称/
+~/Desktop/AppCask Downloads/App Name/
 ```
 
-目录结构:
+Directory structure:
 
 ```
 Instagram/
-├── icons/              # 所有尺寸的图标
-├── screenshots/        # 按设备分类的截图
+├── icons/              # Icons in all sizes
+├── screenshots/        # Screenshots organized by device
 │   ├── iPhone/
 │   └── iPad/
-├── app_info.txt       # 文本格式信息
-├── app_info.json      # JSON格式信息
-└── README.md          # Markdown格式文档
+├── app_info.txt       # Text format info
+├── app_info.json      # JSON format info
+└── README.md          # Markdown format documentation
 ```
 
-## 搜索其他国家的 App Store
+## Search App Stores in Other Countries
 
-AppCask 支持 9 个国家/地区:
+AppCask supports 9 countries/regions:
 
 ```bash
-# 搜索中国区
-appcask "微信" cn
+# Search China region
+appcask "WeChat" cn
 
-# 搜索日本区
+# Search Japan region
 appcask "Line" jp
 
-# 搜索韩国区
+# Search Korea region
 appcask "KakaoTalk" kr
 ```
 
-支持的区域代码:
-- `us` - 🇺🇸 美国
-- `cn` - 🇨🇳 中国
-- `jp` - 🇯🇵 日本
-- `kr` - 🇰🇷 韩国
-- `hk` - 🇭🇰 香港
-- `tw` - 🇹🇼 台湾
-- `gb` - 🇬🇧 英国
-- `de` - 🇩🇪 德国
-- `fr` - 🇫🇷 法国
+Supported region codes:
+- `us` - 🇺🇸 United States
+- `cn` - 🇨🇳 China
+- `jp` - 🇯🇵 Japan
+- `kr` - 🇰🇷 Korea
+- `hk` - 🇭🇰 Hong Kong
+- `tw` - 🇹🇼 Taiwan
+- `gb` - 🇬🇧 United Kingdom
+- `de` - 🇩🇪 Germany
+- `fr` - 🇫🇷 France
 
-## 快捷键
+## Shortcuts
 
-- **回车** - 使用默认选项
-- **q** - 退出当前步骤
-- **Ctrl+C** - 安全退出程序
+- **Enter** - Use default option
+- **q** - Exit current step
+- **Ctrl+C** - Safely exit the program
 
-## 实用技巧
+## Useful Tips
 
-### 技巧1: 批量下载
+### Tip 1: Batch Download
 
-创建一个文本文件 `apps.txt`:
+Create a text file `apps.txt`:
 
 ```
 Instagram
@@ -143,7 +143,7 @@ Facebook
 TikTok
 ```
 
-然后运行:
+Then run:
 
 ```bash
 while read app; do
@@ -152,73 +152,73 @@ while read app; do
 done < apps.txt
 ```
 
-### 技巧2: 只看不下载
+### Tip 2: Preview Only, No Download
 
-想看看有哪些信息但不下载？按 `q` 随时退出！
+Want to see what information is available without downloading? Press `q` to exit anytime!
 
-### 技巧3: macOS 用户专属
+### Tip 3: macOS Exclusive
 
-下载完成后，选择 `y` 直接打开文件夹:
+After download completes, select `y` to open the folder directly:
 
 ```
-是否打开文件夹? (y/n): y
+Open folder? (y/n): y
 ```
 
-## 遇到问题？
+## Having Issues?
 
-### 问题1: 找不到应用
+### Issue 1: Can't find the app
 
-✅ 解决方法:
-- 检查拼写
-- 尝试用英文名搜索
-- 切换不同区域
+✅ Solutions:
+- Check spelling
+- Try searching with the English name
+- Switch to different regions
 
-### 问题2: 网络超时
+### Issue 2: Network timeout
 
-✅ 解决方法:
-- 检查网络连接
-- 使用 VPN
-- 稍后重试
+✅ Solutions:
+- Check network connection
+- Use VPN
+- Try again later
 
-### 问题3: 下载失败
+### Issue 3: Download failed
 
-✅ 解决方法:
+✅ Solutions:
 
 ```bash
-DEBUG=1 appcask "应用名称"
+DEBUG=1 appcask "App Name"
 ```
 
-这会显示详细的错误信息，方便排查问题。
+This will display detailed error messages for troubleshooting.
 
-## 下一步
+## What's Next?
 
-### 了解更多功能
+### Learn More Features
 
-查看完整文档:
+Check full documentation:
 
 ```bash
-# 如果安装了 gem
+# If you have the gem installed
 gem help appcask
 ```
 
-或访问 GitHub 仓库查看 README.md
+Or visit the GitHub repository to view README.md
 
-### 升级到最新版
+### Upgrade to Latest Version
 
 ```bash
 gem update appcask
 ```
 
-### 分享你的使用经验
+### Share Your Experience
 
-觉得好用？给项目点个 Star ⭐
+⭐ Find it helpful? Give the project a Star
 
-有问题？提交 Issue 📝
+📝 Have questions? Submit an Issue
 
-有建议？发起 Pull Request 🚀
+🚀Have suggestions? Open a Pull Request
 
-## 最后
+## Lastly
 
-享受使用 AppCask！如有任何问题，欢迎反馈。
+Enjoy using AppCask! If you have any questions, feedback is always welcome.
 
-Happy downloading! 🎊
+🎊 Happy downloading!

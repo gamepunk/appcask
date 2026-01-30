@@ -4,29 +4,29 @@ All notable changes to this project will be documented in this file.
 
 ## [0.1.0] - 2026-01-29
 
-### 🎉 AppCask 首次发布
+### 🎉 Initial Release
 
-#### 🆕 下载模式
-- ✨ **图标下载** - 4 种尺寸可选 (60x60 到 1024x1024)
-- 📸 **截图下载** - 支持 iPhone 和 iPad 截图批量下载
-- 📝 **应用信息导出** - 3 种格式 (TXT/JSON/Markdown)
-- 📦 **完整包下载** - 一键下载所有资源
+#### 🆕 Download Modes
+- ✨ **Icon Download** - 4 sizes available (60x60 to 1024x1024)
+- 📸 **Screenshot Download** - Batch download for iPhone and iPad screenshots
+- 📝 **App Info Export** - 3 formats (TXT/JSON/Markdown)
+- 📦 **Full Package Download** - One-click download of all resources
 
-#### 📋 应用信息字段
-- 基本信息：名称、ID、Bundle ID、开发者
-- 版本信息：版本号、文件大小、系统要求、支持设备
-- 评分数据：平均评分、评分数量
-- 价格信息：价格、货币
-- 分类信息：主分类、所有分类
-- 内容信息：应用描述、版本更新说明
-- 链接信息：App Store 链接、开发者网站
+#### 📋 App Info Fields
+- Basic Info: Name, ID, Bundle ID, Developer
+- Version Info: Version number, file size, system requirements, supported devices
+- Rating Data: Average rating, number of ratings
+- Price Info: Price, currency
+- Category Info: Primary category, all categories
+- Content Info: App description, version update notes
+- Link Info: App Store link, developer website
 
-#### 🌍 更多区域
-新增支持：
-- 🇹🇼 台湾 (tw)
-- 🇬🇧 英国 (gb)
-- 🇩🇪 德国 (de)
-- 🇫🇷 法国 (fr)
+#### 🌍 More Regions
+New support added for:
+- 🇹🇼 Taiwan (tw)
+- 🇬🇧 United Kingdom (gb)
+- 🇩🇪 Germany (de)
+- 🇫🇷 France (fr)
 
 ## [0.2.0] - 2026-01-30
 
@@ -34,3 +34,20 @@ All notable changes to this project will be documented in this file.
 - Add: improved CLI UX and error messages
 - Add: full app info export (txt/json/markdown)
 - Improve: screenshot & icon download stability
+
+## [0.3.0] - 2026-01-30
+
+### 🏗️ Refactoring
+- Rename module from `Appcask` to `AppCask` for better naming convention
+- Use `require_relative` instead of `require` for internal dependencies
+
+## [0.4.0] - 2026-01-30
+
+### 🔒 Security
+- Add SSL certificate verification (`OpenSSL::SSL::VERIFY_PEER`)
+
+### 🎨 UI Improvements  
+- Fix region selection display format (one region per line for better readability)
+
+### 📚 Documentation
+- Update Ruby version requirement in README

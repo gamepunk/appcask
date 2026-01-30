@@ -1,73 +1,73 @@
-# AppCask - App Store 资源下载工具
+# AppCask - App Store Resources Downloader
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-0.3.0-blue.svg)
+![Version](https://img.shields.io/badge/version-0.4.0-blue.svg)
 ![Ruby](https://img.shields.io/badge/ruby-%3E%3D%203.2.0-red.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-一个全能的命令行工具,用于下载 iOS App Store 的应用资源  
-**图标 · 截图 · 应用简介 · 一键打包**
+An all-in-one command-line tool for downloading resources of iOS App Store apps
+**Icons • Screenshots • App Description • One-click Packaging**
 
-[功能特性](#-功能特性) • [安装](#-安装) • [使用指南](#-使用指南) • [示例](#-使用示例)
+[Features](#-features) • [Installation](#-installation) • [Usage Guide](#-usage-guide) • [Examples](#-usage-examples)
 
 </div>
 
 ---
 
-## ✨ 功能特性
+## ✨ Features
 
-### 🎨 图标下载
-- 支持 4 种尺寸：60x60、100x100、512x512、1024x1024
-- 自动检测图片格式 (PNG/JPG/GIF/WEBP)
-- 智能文件命名
+### 🎨 Icon Download
+- Supports four sizes: 60x60, 100x100, 512x512, 1024x1024
+- Auto-detect image formats (PNG/JPG/GIF/WEBP)
+- Intelligent file naming
 
-### 📸 截图下载
-- iPhone 截图
-- iPad 截图
-- 批量下载所有截图
-- 自动分类保存
+### 📸 Screenshot Download
+- iPhone screenshots
+- iPad screenshots
+- Batch download all screenshots
+- Automatic organization and saving
 
-### 📝 应用信息导出
-- **TXT 格式** - 易读的文本文件
-- **JSON 格式** - 结构化数据
-- **Markdown 格式** - 精美的文档
+### 📝 Export App Information
+- **TXT format** - Human-readable text
+- **JSON format** - Structured data
+- **Markdown format** - Elegant documentation
 
-包含信息：
-- 基本信息（名称、开发者、Bundle ID）
-- 版本信息（当前版本、文件大小、系统要求）
-- 评分统计（平均分、评分数量）
-- 价格信息
-- 应用描述
-- 版本更新说明
-- 相关链接
+Included information:
+- Basic information (name, developer, Bundle ID)
+- Version information (current version, file size, system requirements)
+- Rating statistics (average rating, number of ratings)
+- Pricing information
+- App description
+- Version update notes
+- Related links
 
-### 📦 一键完整包
-下载应用的所有资源，包括：
-- 所有尺寸的图标
-- 所有设备的截图
-- 完整的应用信息（3种格式）
+### 📦 One-click Full Package
+Download all resources for the app, including:
+- Icons in all sizes
+- Screenshots for all devices
+- Complete app information (in 3 formats)
 
-### 🌍 多区域支持
-- 🇺🇸 美国 (us)
-- 🇨🇳 中国 (cn)
-- 🇯🇵 日本 (jp)
-- 🇰🇷 韩国 (kr)
-- 🇭🇰 香港 (hk)
-- 🇹🇼 台湾 (tw)
-- 🇬🇧 英国 (gb)
-- 🇩🇪 德国 (de)
-- 🇫🇷 法国 (fr)
+### 🌍 Multiregion Support
+- 🇺🇸 United States (US)
+- 🇨🇳 China (CN)
+- 🇯🇵 Japan (JP)
+- 🇰🇷 Korea (KR)
+- 🇭🇰 Hong Kong (HK)
+- 🇹🇼 Taiwan (TW)
+- 🇬🇧 United Kingdom (GB)
+- 🇩🇪 Germany (DE)
+- 🇫🇷 France (FR)
 
 ---
 
-## 📦 安装
+## 📦 Installation
 
 ```bash
 gem install appcask
 ```
 
-或从源码安装:
+Or from source:
 
 ```bash
 git clone https://github.com/yourusername/appcask.git
@@ -79,81 +79,81 @@ gem install pkg/appcask-1.0.0.gem
 
 ---
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
 ```bash
-# 交互模式
+# Interactive mode
 appcask
 
-# 快速搜索
+# Quick search
 appcask "Instagram"
 
-# 指定区域
-appcask "微信" cn
+# Specify region
+appcask "WeChat" cn
 ```
 
-### 完整演示
+### Full Demo
 
 ```
 $ appcask "Twitter"
 
 ╔═══════════════════════════════════════════╗
-║      AppCask - App 资源下载工具           ║
+║      AppCask - App Resources Downloader  ║
 ║              v1.0.0                       ║
 ╚═══════════════════════════════════════════╝
 
-🔍 正在搜索 "Twitter"...
+🔍 Searching for "Twitter"...
 
-📋 找到 3 个结果:
+📋 Found 3 results:
 
   [0] X
-      开发者: X Corp. | 版本: 10.31
-      价格: Free | 评分: ⭐ 4.2
+      Developer: X Corp. | Version: 10.31
+      Price: Free | Rating: ⭐ 4.2
 
-请选择 (0-2, 或按q退出): 0
+Please choose (0-2, or press q to quit): 0
 
-✅ 已选择: X
+✅ Selected: X
 
-📦 选择下载内容:
-  [1] 图标
-  [2] 截图
-  [3] 简介信息
-  [4] 完整包(图标+截图+简介)
+📦 Choose content to download:
+  [1] Icon
+  [2] Screenshots
+  [3] Description
+  [4] Full package (Icons + Screenshots + Description)
 
-请选择 (1-4): 4
+Please choose (1-4): 4
 
-✨ 下载完成!
+✨ Download complete!
 📁 ~/Desktop/AppCask Downloads/X
-📊 统计: 15 个文件, 总大小 8.45 MB
+📊 Stats: 15 files, total size 8.45 MB
 ```
 
 ---
 
-## 📖 使用示例
+## 📖 Usage Examples
 
-### 仅下载图标
+### Download Only Icons
 
 ```bash
 appcask "Instagram"
-# 选择: [1] 图标 → [3] 1024x1024
+# Choose: [1] Icons → [3] 1024x1024
 ```
 
-### 下载所有截图
+### Download All Screenshots
 
 ```bash
-appcask "王者荣耀" cn
-# 选择: [2] 截图 → all
+appcask "Honor of Kings" cn
+# Choose: [2] Screenshots → all
 ```
 
-### 导出应用信息
+### Export App Information
 
 ```bash
 appcask "Notion"
-# 选择: [3] 简介信息
-# 输出: TXT + JSON + Markdown
+# Choose: [3] Description
+# Output: TXT + JSON + Markdown
 ```
 
-### 批量下载
+### Batch Download
 
 ```ruby
 #!/usr/bin/env ruby
@@ -168,7 +168,7 @@ end
 
 ---
 
-## 📂 文件结构
+## 📂 File Structure
 
 ```
 AppCask Downloads/
@@ -188,57 +188,57 @@ AppCask Downloads/
 
 ---
 
-## 🔧 高级功能
+## 🔧 Advanced Features
 
-### Debug 模式
+### Debug Mode
 
 ```bash
 DEBUG=1 appcask "AppName"
 ```
 
-### 快捷操作
+### Quick Operations
 
-- **回车** - 默认选项
-- **q** - 退出
-- **Ctrl+C** - 中断
+- **Enter** - Default option
+- **q** - Quit
+- **Ctrl+C** - Interrupt
 
 ---
 
-## 🐛 故障排除
+## 🐛 Troubleshooting
 
-**Q: 搜索不到应用？**  
-A: 确认拼写、尝试切换区域
+**Q: Can't find the app?**
+A: Check spelling and try switching regions
 
-**Q: 图标尺寸不对？**  
-A: 部分应用不支持 1024x1024
+**Q: Icon size is wrong?**
+A: Some apps do not support 1024x1024
 
-**Q: 网络超时？**  
-A: 检查网络、使用 VPN
+**Q: Network timeout?**
+A: Check network, use VPN
 
-**Q: 文件保存在哪？**  
+**Q: Where are files saved?**
 A: `~/Desktop/AppCask Downloads/`
 
 ---
 
-## 🎯 路线图
+## 🎯 Roadmap
 
-- [ ] macOS App Store 支持
-- [ ] 应用评论下载
-- [ ] 批量下载模式
-- [ ] Web 界面
+- [ ] macOS App Store support
+- [ ] App reviews download
+- [ ] Batch download mode
+- [ ] Web interface
 
 ---
 
-## 📄 许可证
+## 📄 License
 
 MIT License
 
 ---
 
-## 📮 联系
+## 📮 Contact
 
 - GitHub: [@yourusername](https://github.com/yourusername)
-- Issues: [反馈问题](https://github.com/yourusername/appcask/issues)
+- Issues: [Feedback issues](https://github.com/yourusername/appcask/issues)
 
 ---
 

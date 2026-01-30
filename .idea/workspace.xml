@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bd4c817-c426-471c-bdf5-e80649db2ae2" name="更改" comment="delete gem">
+    <list default="true" id="1bd4c817-c426-471c-bdf5-e80649db2ae2" name="更改" comment="Release v0.4.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/appcask.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/appcask.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QUICKSTART.md" beforeDir="false" afterPath="$PROJECT_DIR$/QUICKSTART.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/appcask/version.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/appcask/version.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sig/appcask.rbs" beforeDir="false" afterPath="$PROJECT_DIR$/sig/appcask.rbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,18 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "gamepunk"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gamepunk&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:gamepunk/appcask.git",
-    "accountId": "c65009d6-c05d-4123-9f5d-523285df6f23"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:gamepunk/appcask.git&quot;,
+    &quot;accountId&quot;: &quot;c65009d6-c05d-4123-9f5d-523285df6f23&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -45,6 +48,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHELLCHECK.PATH": "/Users/billow/Library/Application Support/JetBrains/RubyMine2025.3/plugins/Shell Script/shellcheck",
     "com.intellij.lang.ruby.rbs.tools.collection.workspace.sync.RbsCollectionUpdateProjectActivity#LAST_UPDATE_TIMESTAMP": "1769702888715",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
@@ -75,6 +79,8 @@
       <workItem from="1767270116395" duration="20000" />
       <workItem from="1769697520161" duration="4958000" />
       <workItem from="1769702829159" duration="2415000" />
+      <workItem from="1769709405343" duration="432000" />
+      <workItem from="1769754602300" duration="460000" />
     </task>
     <task id="LOCAL-00001" summary="delete gem">
       <option name="closed" value="true" />
@@ -84,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769704203657</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Release v0.4.0">
+      <option name="closed" value="true" />
+      <created>1769709497761</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769709497761</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +107,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="delete gem" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete gem" />
+    <MESSAGE value="Release v0.4.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Release v0.4.0" />
   </component>
 </project>
