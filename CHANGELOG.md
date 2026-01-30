@@ -51,3 +51,12 @@ New support added for:
 
 ### 📚 Documentation
 - Update Ruby version requirement in README
+
+## [0.5.0] - 2026-01-30
+
+### 🌍 Internationalization
+- **Comprehensive English Documentation**: Translated all user-facing documentation from Chinese to American English
+  - README.md: Complete translation of app description, features, installation guide, usage examples
+  - QUICKSTART.md: Full translation of quick start guide with all use case scenarios
+  - CHANGELOG.md: Translated all version history entries
+- **Type Signature Update**: Fixed RBS type signature module name from `Appcask` to `AppCask` for consistency
