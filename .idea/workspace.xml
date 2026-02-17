@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bd4c817-c426-471c-bdf5-e80649db2ae2" name="更改" comment="Release v0.4.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QUICKSTART.md" beforeDir="false" afterPath="$PROJECT_DIR$/QUICKSTART.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/appcask/version.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/appcask/version.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sig/appcask.rbs" beforeDir="false" afterPath="$PROJECT_DIR$/sig/appcask.rbs" afterDir="false" />
-    </list>
+    <list default="true" id="1bd4c817-c426-471c-bdf5-e80649db2ae2" name="更改" comment="update CHANGELOG.md" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +73,7 @@
       <workItem from="1769697520161" duration="4958000" />
       <workItem from="1769702829159" duration="2415000" />
       <workItem from="1769709405343" duration="432000" />
-      <workItem from="1769754602300" duration="460000" />
+      <workItem from="1769754602300" duration="1322000" />
     </task>
     <task id="LOCAL-00001" summary="delete gem">
       <option name="closed" value="true" />
@@ -98,7 +91,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769709497761</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Release v0.5.0">
+      <option name="closed" value="true" />
+      <created>1769755115516</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1769755115516</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update CHANGELOG.md">
+      <option name="closed" value="true" />
+      <created>1769755271793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769755271793</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +117,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="delete gem" />
     <MESSAGE value="Release v0.4.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Release v0.4.0" />
+    <MESSAGE value="Release v0.5.0" />
+    <MESSAGE value="update CHANGELOG.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update CHANGELOG.md" />
   </component>
 </project>
