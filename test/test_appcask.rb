@@ -22,12 +22,12 @@ class TestAppcask < Minitest::Test
 
   # Test image format detection
   def test_detect_png
-    png_header = "\x89PNG\r\n\x1A\n".b + "fake content"
+    png_header = "#{"\x89PNG\r\n\x1A\n".b}fake content"
     assert_equal "png", @appcask.send(:detect_image_extension, png_header)
   end
 
   def test_detect_jpg
-    jpg_header = "\xFF\xD8".b + "fake content"
+    jpg_header = "#{"\xFF\xD8".b}fake content"
     assert_equal "jpg", @appcask.send(:detect_image_extension, jpg_header)
   end
 
@@ -64,7 +64,7 @@ class TestAppcask < Minitest::Test
     assert_kind_of Hash, AppCask::ICON_SIZES
     assert_equal 4, AppCask::ICON_SIZES.size
 
-    AppCask::ICON_SIZES.each do |_key, value|
+    AppCask::ICON_SIZES.each_value do |value|
       assert_kind_of Hash, value
       assert value.key?(:display)
       assert value.key?(:key)
@@ -73,9 +73,9 @@ class TestAppcask < Minitest::Test
 
   def test_countries_constant
     assert_kind_of Hash, AppCask::COUNTRIES
-    assert AppCask::COUNTRIES.key?('us')
-    assert AppCask::COUNTRIES.key?('cn')
-    assert AppCask::COUNTRIES.key?('jp')
+    assert AppCask::COUNTRIES.key?("us")
+    assert AppCask::COUNTRIES.key?("cn")
+    assert AppCask::COUNTRIES.key?("jp")
 
     AppCask::COUNTRIES.each do |code, name|
       assert_equal 2, code.length
@@ -87,7 +87,7 @@ class TestAppcask < Minitest::Test
     assert_kind_of Hash, AppCask::DOWNLOAD_MODES
     assert_equal 4, AppCask::DOWNLOAD_MODES.size
 
-    AppCask::DOWNLOAD_MODES.each do |_key, value|
+    AppCask::DOWNLOAD_MODES.each_value do |value|
       assert value.key?(:name)
       assert value.key?(:method)
       assert_kind_of Symbol, value[:method]
@@ -96,8 +96,8 @@ class TestAppcask < Minitest::Test
 
   # Test unique filename generation
   def test_get_unique_filename
-    require 'tmpdir'
-    require 'fileutils'
+    require "tmpdir"
+    require "fileutils"
 
     Dir.mktmpdir do |dir|
       original = File.join(dir, "test.png")
@@ -124,38 +124,38 @@ class TestAppcask < Minitest::Test
   # Test app info JSON generation
   def test_generate_app_info_json
     mock_app = {
-      'trackCensoredName' => 'Test App',
-      'trackId' => 123456,
-      'bundleId' => 'com.test.app',
-      'artistName' => 'Test Developer',
-      'artistId' => 789,
-      'version' => '1.0.0',
-      'fileSizeBytes' => 10_485_760,
-      'minimumOsVersion' => '14.0',
-      'price' => 0,
-      'formattedPrice' => 'Free',
-      'currency' => 'USD',
-      'averageUserRating' => 4.5,
-      'userRatingCount' => 1000,
-      'primaryGenreName' => 'Utilities',
-      'genres' => ['Utilities', 'Productivity'],
-      'releaseDate' => '2024-01-01',
-      'currentVersionReleaseDate' => '2024-06-01',
-      'contentAdvisoryRating' => '4+',
-      'description' => 'A test application',
-      'releaseNotes' => 'Bug fixes',
-      'trackViewUrl' => 'https://apps.apple.com/app/test/id123456',
-      'sellerUrl' => 'https://test.com',
-      'screenshotUrls' => [],
-      'ipadScreenshotUrls' => []
+      "trackCensoredName" => "Test App",
+      "trackId" => 123_456,
+      "bundleId" => "com.test.app",
+      "artistName" => "Test Developer",
+      "artistId" => 789,
+      "version" => "1.0.0",
+      "fileSizeBytes" => 10_485_760,
+      "minimumOsVersion" => "14.0",
+      "price" => 0,
+      "formattedPrice" => "Free",
+      "currency" => "USD",
+      "averageUserRating" => 4.5,
+      "userRatingCount" => 1000,
+      "primaryGenreName" => "Utilities",
+      "genres" => %w[Utilities Productivity],
+      "releaseDate" => "2024-01-01",
+      "currentVersionReleaseDate" => "2024-06-01",
+      "contentAdvisoryRating" => "4+",
+      "description" => "A test application",
+      "releaseNotes" => "Bug fixes",
+      "trackViewUrl" => "https://apps.apple.com/app/test/id123456",
+      "sellerUrl" => "https://test.com",
+      "screenshotUrls" => [],
+      "ipadScreenshotUrls" => []
     }
 
     result = @appcask.send(:generate_app_info_json, mock_app)
 
     assert_kind_of Hash, result
-    assert_equal 'Test App', result[:basic][:name]
-    assert_equal 123456, result[:basic][:app_id]
-    assert_equal '1.0.0', result[:version][:current_version]
+    assert_equal "Test App", result[:basic][:name]
+    assert_equal 123_456, result[:basic][:app_id]
+    assert_equal "1.0.0", result[:version][:current_version]
     assert_equal 10.0, result[:version][:file_size_mb]
     assert_equal 4.5, result[:ratings][:average_rating]
   end
@@ -163,16 +163,16 @@ class TestAppcask < Minitest::Test
   # Test app directory creation
   def test_create_app_directory
     mock_app = {
-      'trackCensoredName' => 'Test/App:Name'
+      "trackCensoredName" => "Test/App:Name"
     }
 
     dir = @appcask.send(:create_app_directory, mock_app)
 
     assert Dir.exist?(dir)
-    assert dir.include?('AppCask Downloads')
-    assert dir.include?('Test_App_Name')
+    assert dir.include?("AppCask Downloads")
+    assert dir.include?("Test_App_Name")
 
     # Cleanup
-    FileUtils.rm_rf(dir.split('Test_App_Name')[0])
+    FileUtils.rm_rf(dir.split("Test_App_Name")[0])
   end
 end

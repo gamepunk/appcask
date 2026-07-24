@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require 'cfpropertylist'
-require 'icns'
-require 'mini_magick'
-require 'fileutils'
+require "cfpropertylist"
+require "icns"
+require "mini_magick"
+require "fileutils"
 
 module AppCask
   class LocalApp
-    APPS_DIR = '/Applications'
-    OUTPUT_BASE = File.join(Dir.home, 'Desktop', 'AppCask Downloads', 'Local Apps')
+    APPS_DIR = "/Applications"
+    OUTPUT_BASE = File.join(Dir.home, "Desktop", "AppCask Downloads", "Local Apps")
 
     class << self
       def fetch_all
@@ -18,13 +18,13 @@ module AppCask
 
         FileUtils.mkdir_p(OUTPUT_BASE)
 
-        apps = Dir.glob(File.join(APPS_DIR, '*.app')).sort
+        apps = Dir.glob(File.join(APPS_DIR, "*.app"))
         total = apps.count
         success = 0
         skipped = 0
 
         apps.each_with_index do |app_path, index|
-          app_name = File.basename(app_path, '.app')
+          app_name = File.basename(app_path, ".app")
           print "\r[#{index + 1}/#{total}] Processing: #{app_name.ljust(30)}"
 
           result = extract_icon(app_path)
@@ -35,45 +35,45 @@ module AppCask
           end
         end
 
-        puts "\n\n#{'=' * 50}"
+        puts "\n\n#{"=" * 50}"
         puts "Done!"
         puts "  Total apps: #{total}"
         puts "  Extracted: #{success}"
         puts "  Skipped: #{skipped}"
         puts "  Output: #{OUTPUT_BASE}"
-        puts '=' * 50
+        puts "=" * 50
 
         # Open folder on macOS
-        if RUBY_PLATFORM.include?('darwin')
-          print "\nOpen the folder? (y/n): "
-          response = $stdin.gets
-          system("open '#{OUTPUT_BASE}'") if response&.strip&.downcase == 'y'
-        end
+        return unless RUBY_PLATFORM.include?("darwin")
+
+        print "\nOpen the folder? (y/n): "
+        response = $stdin.gets
+        system("open '#{OUTPUT_BASE}'") if response&.strip&.downcase == "y"
       end
 
       private
 
       def extract_icon(app_path)
         # 1. Read Info.plist
-        plist_path = File.join(app_path, 'Contents', 'Info.plist')
+        plist_path = File.join(app_path, "Contents", "Info.plist")
         return nil unless File.exist?(plist_path)
 
         plist = CFPropertyList::List.new(file: plist_path)
         info = CFPropertyList.native_types(plist.value)
 
         # 2. Get icon file name
-        icon_name = info['CFBundleTypeIconFile'] || info['CFBundleIconFile'] || info['CFBundleIconName']
+        icon_name = info["CFBundleTypeIconFile"] || info["CFBundleIconFile"] || info["CFBundleIconName"]
         return nil unless icon_name
 
-        icon_name += '.icns' unless icon_name.end_with?('.icns')
+        icon_name += ".icns" unless icon_name.end_with?(".icns")
 
         # 3. Find .icns file
-        icns_path = File.join(app_path, 'Contents', 'Resources', icon_name)
+        icns_path = File.join(app_path, "Contents", "Resources", icon_name)
         return nil unless File.exist?(icns_path)
 
         # 4. Parse .icns and extract largest PNG
         reader = Icns::Reader.new(icns_path)
-        
+
         # Priority: 1024 → 512 → 256 → 128
         [1024, 512, 256, 128].each do |size|
           data = reader.image(size: size)
@@ -87,12 +87,12 @@ module AppCask
         end
 
         nil
-      rescue StandardError => e
+      rescue StandardError
         nil
       end
 
       def png?(data)
-        png_magic = [0x89, 0x50, 0x4e, 0x47].pack('C4')
+        png_magic = [0x89, 0x50, 0x4e, 0x47].pack("C4")
         data[0..3] == png_magic
       end
 
@@ -110,14 +110,14 @@ module AppCask
         # Write to temp file, resize, then save
         tmp_input = File.join(Dir.tmpdir, "appcask_input_#{Process.pid}.png")
         tmp_output = File.join(Dir.tmpdir, "appcask_output_#{Process.pid}.png")
-        
+
         File.write(tmp_input, data)
-        
+
         image = MiniMagick::Image.new(tmp_input)
         image.resize "512x512"
         image.format "png"
         image.write(tmp_output)
-        
+
         FileUtils.cp(tmp_output, output_path)
       ensure
         FileUtils.rm_f(tmp_input) if tmp_input
@@ -125,14 +125,14 @@ module AppCask
       end
 
       def output_path(app_path)
-        app_name = File.basename(app_path, '.app')
-        filename = sanitize_app_name(app_name) + '.png'
+        app_name = File.basename(app_path, ".app")
+        filename = "#{sanitize_app_name(app_name)}.png"
         File.join(OUTPUT_BASE, filename)
       end
 
       def sanitize_app_name(name)
         # Keep Chinese characters, convert to lowercase, replace spaces with hyphens
-        name.downcase.gsub(/\s+/, '-').gsub(/[^a-z0-9\u4e00-\u9fff-]/, '').gsub(/^-|-$/, '')
+        name.downcase.gsub(/\s+/, "-").gsub(/[^a-z0-9\u4e00-\u9fff-]/, "").gsub(/^-|-$/, "")
       end
     end
   end
