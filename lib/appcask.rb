@@ -42,16 +42,23 @@ module AppCask
 
   class << self
     def main
-      begin
+      command = ARGV[0]&.downcase
+
+      case command
+      when 'fetch', 'local'
+        show_banner
+        require_relative 'appcask/local_app'
+        AppCask::LocalApp.fetch_all
+      else
         get
-      rescue Interrupt
-        puts "\n\n👋 Goodbye!"
-        exit 0
-      rescue StandardError => e
-        warn "\n❌ Error: #{e.message}"
-        warn e.backtrace if ENV['DEBUG']
-        exit 1
       end
+    rescue Interrupt
+      puts "\n\n👋 Goodbye!"
+      exit 0
+    rescue StandardError => e
+      warn "\n❌ Error: #{e.message}"
+      warn e.backtrace if ENV['DEBUG']
+      exit 1
     end
 
     def get

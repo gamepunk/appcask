@@ -32,4 +32,8 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = ["appcask"]
   spec.require_paths = ["lib"]
+
+  spec.add_dependency 'icns', '~> 0.2'
+  spec.add_dependency 'CFPropertyList', '~> 4.0'
+  spec.add_dependency 'mini_magick', '~> 4.0'
 end
