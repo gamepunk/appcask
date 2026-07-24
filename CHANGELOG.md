@@ -60,3 +60,18 @@ New support added for:
   - QUICKSTART.md: Full translation of quick start guide with all use case scenarios
   - CHANGELOG.md: Translated all version history entries
 - **Type Signature Update**: Fixed RBS type signature module name from `Appcask` to `AppCask` for consistency
+
+## [0.6.0] - 2026-07-24
+
+### 🆕 New Features
+- **`appcask fetch`** command: Extract icons from locally installed macOS apps
+  - Reads `Info.plist` to find `CFBundleTypeIconFile` / `CFBundleIconFile`
+  - Parses `.icns` files and extracts the largest available PNG
+  - Auto-resizes to 512x512 with transparency preserved
+  - Saves to `~/Desktop/AppCask Downloads/Local Apps/`
+  - Supports Chinese app names
+
+### 📦 Dependencies
+- Add `icns` gem for `.icns` file parsing
+- Add `CFPropertyList` gem for reading binary/XML plist files
+- Add `mini_magick` gem for image resizing

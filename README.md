@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-0.4.0-blue.svg)
+![Version](https://img.shields.io/badge/version-0.6.0-blue.svg)
 ![Ruby](https://img.shields.io/badge/ruby-%3E%3D%203.2.0-red.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
@@ -74,7 +74,7 @@ git clone https://github.com/yourusername/appcask.git
 cd appcask
 bundle install
 rake build
-gem install pkg/appcask-1.0.0.gem
+gem install pkg/appcask-0.6.0.gem
 ```
 
 ---
@@ -99,7 +99,7 @@ $ appcask "Twitter"
 
 ╔═══════════════════════════════════════════╗
 ║      AppCask - App Resources Downloader  ║
-║              v1.0.0                       ║
+║              v0.6.0                       ║
 ╚═══════════════════════════════════════════╝
 
 🔍 Searching for "Twitter"...
