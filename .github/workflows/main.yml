@@ -27,10 +27,6 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-      - name: Install dependencies
-        run: |
-          bundle config set frozen false
-          bundle install
       - name: Run the default task
         run: bundle exec rake
 
@@ -45,10 +41,6 @@ jobs:
         with:
           ruby-version: '3.4.10'
           bundler-cache: true
-      - name: Install dependencies
-        run: |
-          bundle config set frozen false
-          bundle install
       - name: Build gem
         run: gem build appcask.gemspec
       - name: Publish to RubyGems
