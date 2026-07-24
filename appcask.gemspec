@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "AppCask is a CLI tool for downloading App Store icons, screenshots and metadata."
   spec.homepage = "https://github.com/gamepunk/appcask"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.2.0"
+  spec.required_ruby_version = ">= 3.4.10"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org/"
   spec.metadata["homepage_uri"] = spec.homepage
